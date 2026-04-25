@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2d5a27;
-            --accent-color: #ffce00;
+            --primary-color: #2d5a27; /* اللون الأخضر الرسمي */
+            --accent-color: #ffce00;  /* اللون الأصفر الذهبي */
             --bg-dark: #121212;
             --card-bg: #ffffff;
         }
@@ -19,141 +19,177 @@
             margin: 0;
             padding: 0;
             color: #333;
+            line-height: 1.6;
         }
 
         /* هيدر الموقع */
         header {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('logo.jpg');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('logo.jpg');
             background-size: cover;
             background-position: center;
-            height: 300px;
+            height: 350px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            border-bottom: 6px solid var(--accent-color);
+            border-bottom: 8px solid var(--accent-color);
         }
 
         header h1 {
             font-family: 'Tajawal', sans-serif;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 900;
             color: #fff;
             margin: 0;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.6);
         }
 
         header p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--accent-color);
-            margin-top: 10px;
+            margin-top: 15px;
             font-weight: bold;
+            background: rgba(0,0,0,0.3);
+            padding: 5px 20px;
+            border-radius: 50px;
         }
 
         .container {
             max-width: 900px;
-            margin: -50px auto 50px;
+            margin: -60px auto 50px;
             padding: 0 20px;
         }
 
-        /* البطاقات الأساسية */
+        /* تصميم البطاقات */
         .card {
             background: var(--card-bg);
-            border-radius: 20px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            border-top: 5px solid var(--primary-color);
+            border-radius: 25px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-top: 6px solid var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
         }
 
         .section-title {
             font-family: 'Tajawal', sans-serif;
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 900;
             text-align: center;
             color: var(--primary-color);
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            position: relative;
         }
 
-        /* --- ركن الدكتورة ناهد (تصميم انجاز ميديا) --- */
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        /* --- قسم الدكتورة ناهد (المحتوى الطبي) --- */
         .medical-section {
-            background: #1a3317;
+            background: #1a3317; /* أخضر غامق جداً للفخامة */
             color: #fff;
             border-top-color: var(--accent-color);
         }
 
         .medical-category {
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
-        .category-title {
+        .category-header {
+            display: flex;
+            align-items: center;
             background: var(--accent-color);
             color: #000;
-            padding: 8px 20px;
-            border-radius: 10px;
-            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 12px;
             font-weight: 900;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
         }
 
         .info-list {
             list-style: none;
             padding: 0;
-            text-align: right;
         }
 
         .info-list li {
             background: rgba(255,255,255,0.08);
-            margin-bottom: 8px;
-            padding: 12px 15px;
-            border-radius: 8px;
-            border-right: 4px solid var(--accent-color);
-            font-size: 0.95rem;
-            line-height: 1.6;
+            margin-bottom: 12px;
+            padding: 15px 20px;
+            border-radius: 12px;
+            border-right: 5px solid var(--accent-color);
+            font-size: 1rem;
+            transition: 0.3s;
         }
 
-        /* قسم الإشراف والدعم */
+        .info-list li:hover {
+            background: rgba(255,255,255,0.15);
+        }
+
+        /* صور ومعلومات الإشراف */
         .profile-img {
-            width: 130px;
-            height: 130px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            border: 4px solid var(--accent-color);
-            display: block;
-            margin: 0 auto 15px;
+            border: 5px solid var(--accent-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
         }
 
         .bank-img {
             width: 100%;
-            max-width: 500px;
-            border-radius: 15px;
+            max-width: 550px;
+            border-radius: 20px;
+            margin: 20px auto;
             display: block;
-            margin: 15px auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .btn-action {
+        .btn-whatsapp {
             display: inline-block;
-            background: var(--accent-color);
-            color: #000;
-            padding: 15px 35px;
+            background: #25d366;
+            color: #fff;
+            padding: 15px 40px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 900;
+            font-size: 1.1rem;
             margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(37,211,102,0.3);
             transition: 0.3s;
         }
 
-        .btn-action:hover {
+        .btn-whatsapp:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(255,206,0,0.4);
+            background: #1ebe57;
         }
 
         footer {
             text-align: center;
-            padding: 30px;
-            color: #888;
-            font-size: 0.9rem;
+            padding: 40px;
+            background: #eee;
+            color: #666;
+            font-size: 0.95rem;
+            border-top: 1px solid #ddd;
+        }
+
+        /* تحسينات الموبايل */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            .container { margin-top: -40px; }
+            .card { padding: 20px; }
         }
     </style>
 </head>
@@ -161,77 +197,67 @@
 
 <header>
     <h1>منصة أم طلحة القديمة</h1>
-    <p>بوابتكم للتكافل، الوعي، والإعمار</p>
+    <p>تنمية - توعية - تكافل اجتماعي</p>
 </header>
 
 <div class="container">
 
     <div class="card" style="text-align: center;">
         <img src="profile.png" alt="سفير القوافي" class="profile-img">
-        <h2 style="margin: 0; color: var(--primary-color);">إشراف: سفير القوافي</h2>
-        <p style="color: #666; font-weight: bold;">محمد الجيلي مصطفى سعيد</p>
-        <p>نعمل لخدمة أهلنا وتطوير منطقتنا عبر المبادرات الهادفة.</p>
-        <a href="https://wa.me/249129642171" class="btn-action">تواصل معنا عبر واتساب</a>
+        <h2 style="margin: 0; color: var(--primary-color); font-weight: 900;">إشراف: سفير القوافي</h2>
+        <p style="color: #555; font-size: 1.1rem; margin-top: 5px;">محمد الجيلي مصطفى سعيد</p>
+        <p>نعمل معاً من أجل نهضة المنطقة وتقديم الخدمات النوعية لأهلنا الكرام.</p>
+        <a href="https://wa.me/249129642171" class="btn-whatsapp">تواصل مباشرة عبر واتساب</a>
     </div>
 
     <div class="card medical-section">
         <h2 class="section-title" style="color: #fff;">ركن الدكتورة ناهد الجيلي الطبي</h2>
-        <p style="text-align: center; color: #ffce00; margin-bottom: 30px;">دليل التوعية المختبراتية والإسعافات الأولية</p>
-
+        
         <div class="medical-category">
-            <div class="category-title">🔬 عالم المختبرات والتحاليل</div>
+            <div class="category-header">🔬 معلومات تهمك حول المختبرات</div>
             <ul class="info-list">
-                <li>فحص السكر الصائم يتطلب صياماً من 8 إلى 10 ساعات، ويسمح بشرب الماء فقط.</li>
-                <li>تحليل البول الصباحي هو الأفضل للكشف عن البروتين والتهابات الكلى.</li>
-                <li>يجب عدم ممارسة رياضة عنيفة قبل فحص الهرمونات لأنها تسبب نتائج غير دقيقة.</li>
-                <li>تحليل مخزون الحديد (Ferritin) أدق من فحص الحديد العادي لكشف الأنيميا.</li>
-                <li>فحص وظائف الكبد يتأثر بتناول المسكنات القوية، أخبر المخبري إذا كنت تتناولها.</li>
-                <li>الدهون الثلاثية تتطلب صيام 12 ساعة كاملة لضمان دقة النتيجة.</li>
-                <li>فصيلة الدم O- نادرة جداً وتسمى "المتبرع الكريم" لأنها تعطي كل الفصائل.</li>
+                <li><b>فحص السكر الصائم:</b> يتطلب صياماً من 8 إلى 12 ساعة لضمان دقة النتيجة.</li>
+                <li><b>تحليل البول:</b> يفضل دائماً عينة "منتصف البول" الصباحية لتجنب الشوائب الخارجية.</li>
+                <li><b>وظائف الكلى:</b> شرب الماء الكافي قبل الفحص ضروري إلا إذا طلب الطبيب غير ذلك.</li>
+                <li><b>فحص الدهون:</b> يحتاج صياماً تاماً لمدة 12 ساعة (يسمح بالماء فقط).</li>
+                <li><b>تنبيه:</b> يجب إخبار المخبري بأي أدوية تتناولها، لأن بعضها يؤثر على النتائج الكيميائية.</li>
             </ul>
         </div>
 
         <div class="medical-category">
-            <div class="category-title">🚑 دليل الإسعافات الأولية السريع</div>
+            <div class="category-header">🚑 دليل الإسعافات الأولية السريع</div>
             <ul class="info-list">
-                <li>عند حدوث حروق: ضع الماء الجاري الفاتر فقط، وتجنب وضع المعجون أو الزبدة.</li>
-                <li>عند الرعاف (نزيف الأنف): أمل الرأس للأمام واضغط على الجزء اللين من الأنف.</li>
-                <li>في حال بلع لسان: ارفع الذقن للأعلى مع إمالة الرأس للخلف لفتح مجرى التنفس.</li>
-                <li>عند التواء الكاحل: استخدم الثلج فوراً لتقليل التورم وارفع القدم للأعلى.</li>
-                <li>عند الغصة (شرقة الطعام): استخدم "مناورة هيمليك" بالضغط القوي أعلى البطن.</li>
-                <li>ضربة الشمس: انقل المصاب لمكان بارد، واستخدم كمادات ماء فاتر وليس مثلجاً.</li>
-                <li>لدغة الحشرات: نظف المكان بالماء والصابون وضع ثلجاً لتقليل انتشار السم.</li>
+                <li><b>الحروق البسيطة:</b> ضع الجزء المصاب تحت ماء جارٍ فاتر لمدة 15 دقيقة. لا تستخدم الثلج مباشرة.</li>
+                <li><b>النزيف:</b> اضغط مباشرة وبقوة على الجرح بقطعة قماش نظيفة وارفع العضو المصاب للأعلى.</li>
+                <li><b>الإغماء:</b> اجعل المصاب يستلقي على ظهره وارفع قدميه للأعلى لتحسين تدفق الدم للدماغ.</li>
+                <li><b>الكسور:</b> لا تحاول تحريك العضو المصاب، قم بتثبيته كما هو حتى وصول الإسعاف.</li>
+                <li><b>التسمم:</b> اتصل بالطوارئ فوراً ولا تحاول إجبار المصاب على التقيؤ ما لم يطلب منك المختص ذلك.</li>
             </ul>
         </div>
 
-        <div class="medical-category">
-            <div class="category-title">💡 كبسولات طبية توعوية</div>
-            <ul class="info-list">
-                <li>المضادات الحيوية تعالج البكتيريا فقط، ولا تنفع في علاج الرشح أو الأنفلونزا الفيروسية.</li>
-                <li>شرب الماء الدافئ صباحاً يساعد في تحسين عملية الهضم وتنشيط الكلى.</li>
-                <li>نقص فيتامين د يسبب آلام العظام، الخمول، واعتلال المزاج.</li>
-                <li>المشي السريع لمدة 20 دقيقة يومياً يقلل خطر الإصابة بالسكري بنسبة 30%.</li>
-                <li>تجنب النوم مباشرة بعد الأكل يقلل من فرص حدوث ارتجاع المريء.</li>
-            </ul>
-        </div>
-        <p style="text-align: center; font-style: italic; color: var(--accent-color); font-size: 0.8rem;">* هذا القسم مرجع توعوي ويجب دائماً استشارة الطبيب المختص *</p>
+        <p style="text-align: center; color: var(--accent-color); font-size: 0.85rem; font-style: italic;">* هذه المعلومات لغرض التوعية فقط، استشر طبيبك دائماً في الحالات الطارئة *</p>
     </div>
 
     <div class="card">
-        <h2 class="section-title">لدعم مشاريع المبادرة</h2>
-        <p style="text-align: center;">نستقبل مساهماتكم لإعمار المنطقة عبر حسابنا في بنك الخرطوم:</p>
-        <img src="bank_card.jpg" alt="حساب البنك" class="bank-img">
+        <h2 class="section-title">دعم مشاريع المبادرة</h2>
+        <p style="text-align: center; font-size: 1.1rem;">مساهمتكم هي الوقود لاستمرار مشاريع الإعمار والخدمات في المنطقة.</p>
+        <div style="background: #f9f9f9; padding: 20px; border-radius: 15px; text-align: center; border: 1px dashed #ccc;">
+            <p style="margin: 5px 0;"><b>بنك الخرطوم (بنكك)</b></p>
+            <p style="font-size: 1.5rem; color: #d32f2f; font-weight: 900; letter-spacing: 2px;">9105393</p>
+            <p style="margin: 5px 0;">فرع الجزيرة - باسم: محمد الجيلي مصطفى</p>
+        </div>
+        <img src="bank_card.jpg" alt="بطاقة البنك" class="bank-img">
     </div>
 
     <div class="card" style="background: var(--bg-dark); color: #fff; border: none; text-align: center;">
-        <h2 style="font-family: 'Tajawal'; font-weight: 900; font-size: 2rem;">لا تتوقف عند أحلامك</h2>
-        <p style="color: #aaa;">كل خطوة صغيرة اليوم هي إعمار كبير للغد.</p>
+        <h2 style="font-family: 'Tajawal'; font-weight: 900; margin-bottom: 10px;">يداً بيد نحو مستقبل أفضل</h2>
+        <p style="color: #888;">منصة أبناء أم طلحة القديمة - بذرة خير لنماء دائم.</p>
     </div>
 
 </div>
 
 <footer>
-    <p>جميع الحقوق محفوظة &copy; 2026 - منصة أم طلحة القديمة</p>
+    <p>جميع الحقوق محفوظة &copy; 2026 | تصميم وتطوير منصة أم طلحة</p>
 </footer>
 
 </body>
