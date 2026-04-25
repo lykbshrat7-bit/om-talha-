@@ -6,120 +6,56 @@
     <title>منصة أبناء أم طلحة القديمة</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Cairo', sans-serif;
-            background-color: #f0f2f5;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        header {
-            background-color: #2d5a27;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        .section {
-            margin-bottom: 30px;
-            text-align: center;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-        }
-        .section:last-child { border-bottom: none; }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin: 15px 0;
-            transition: transform 0.3s;
-        }
-        img:hover { transform: scale(1.02); }
-
-        .logo-main {
-            width: 250px;
-            border-radius: 50%;
-            border: 5px solid #fff;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-        }
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid #2d5a27;
-        }
-        .btn-contact {
-            display: inline-block;
-            background-color: #25d366;
-            color: white;
-            padding: 10px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        .bank-info {
-            background-color: #fffdf2;
-            border: 2px dashed #d4af37;
-            padding: 15px;
-            border-radius: 15px;
-        }
+        body { font-family: 'Cairo', sans-serif; background-color: #f0f2f5; margin: 0; padding: 0; color: #333; }
+        header { background-color: #2d5a27; color: white; padding: 20px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .logo-container { margin: 20px auto; max-width: 200px; }
+        .logo-container img { width: 100%; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        .container { max-width: 800px; margin: 20px auto; padding: 20px; }
+        .card { background: white; border-radius: 15px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; }
+        .profile-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #2d5a27; margin-bottom: 10px; }
+        .bank-img { width: 100%; border-radius: 10px; margin-top: 15px; cursor: pointer; }
+        .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
+        .gallery img { width: 100%; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .footer { text-align: center; padding: 20px; font-size: 0.9em; color: #666; }
+        .btn-whatsapp { display: inline-block; background-color: #25d366; color: white; padding: 10px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 10px; }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>المنصة الرسمية لأبناء أم طلحة القديمة</h1>
-    <p>يداً بيد.. من أجل غدٍ أفضل</p>
+    <h1>منصة أبناء أم طلحة القديمة</h1>
+    <p>خدمات، عقارات، وتواصل اجتماعي</p>
 </header>
 
 <div class="container">
-    
-    <div class="section">
-        <img src="1000017210.png" alt="شعار المبادرة" class="logo-main">
-        <h2 style="color: #2d5a27;">مبادرة تشييد أم طلحة القديمة</h2>
-        <p>مبادرة مجتمعية تهدف إلى النهوض بالمنطقة وتوفير الخدمات الأساسية وتعزيز روح التكافل بين الأبناء.</p>
+    <div class="card">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="شعار المبادرة">
+        </div>
+        <img src="profile.png" alt="المشرف" class="profile-img">
+        <h3>إشراف: سفير القوافي</h3>
+        <p>نعمل معاً من أجل إعمار وتطوير منطقتنا</p>
+        <a href="https://wa.me/249129642171" class="btn-whatsapp">تواصل عبر واتساب</a>
     </div>
 
-    <div class="section bank-info">
-        <h3 style="color: #1a3a5f;">💳 للمساهمة ودعم المبادرة</h3>
-        <p>يمكنكم التبرع عبر حساب بنك الخرطوم الموضح في الصورة أدناه:</p>
-        <img src="1000025596.png" alt="بيانات بنك الخرطوم">
+    <div class="card">
+        <h2>لدعم المبادرة والمشاريع</h2>
+        <p>يمكنكم المساهمة عبر الحساب البنكي التالي:</p>
+        <img src="bank_card.jpg" alt="بيانات بنك الخرطوم" class="bank-img">
     </div>
 
-    <div class="section">
-        <h3 style="color: #2d5a27;">📢 لوحة الإعلانات والوظائف</h3>
-        <div style="background: #e8f5e9; padding: 15px; border-radius: 10px; text-align: right;">
-            <p>✅ <strong>قريباً:</strong> سيتم عرض كافة الفرص التدريبية والوظائف المتاحة لأبناء المنطقة هنا.</p>
-            <p>✅ <strong>إعلان:</strong> لأصحاب العمل والمشاريع، يمكنكم التواصل لإضافة إعلاناتكم مجاناً.</p>
+    <div class="card">
+        <h2>معرض الصور والخواطر</h2>
+        <div class="gallery">
+            <img src="quote1.jpg" alt="حكمة 1">
+            <img src="quote2.jpg" alt="حكمة 2">
         </div>
     </div>
-
-    <div class="section">
-        <h3 style="color: #2d5a27;">👤 تواصل معنا</h3>
-        <img src="1000025919.png" alt="المسؤول" class="profile-img">
-        <p><strong>محمد الجيلي مصطفى سعيد</strong></p>
-        <p>للتواصل المباشر عبر واتساب:</p>
-        <a href="https://wa.me/249129642171" class="btn-contact">تحدث معنا الآن</a>
-        <br>
-        <img src="1000019057.jpg" alt="QR Code" style="width: 100px; margin-top: 20px;">
-    </div>
-
 </div>
 
-<footer style="text-align: center; padding: 20px; color: #777; font-size: 0.9em;">
-    <p>جميع الحقوق محفوظة &copy; 2026 - منصة أم طلحة القديمة</p>
-</footer>
+<div class="footer">
+    <p>جميع الحقوق محفوظة &copy; 2026 - منصة أم طلحة</p>
+</div>
 
 </body>
 </html>
