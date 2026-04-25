@@ -4,58 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>منصة أبناء أم طلحة القديمة</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Cairo', sans-serif; background-color: #f0f2f5; margin: 0; padding: 0; color: #333; }
-        header { background-color: #2d5a27; color: white; padding: 20px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .logo-container { margin: 20px auto; max-width: 200px; }
-        .logo-container img { width: 100%; border-radius: 50%; border: 4px solid #fff; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
-        .container { max-width: 800px; margin: 20px auto; padding: 20px; }
-        .card { background: white; border-radius: 15px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; }
-        .profile-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #2d5a27; margin-bottom: 10px; }
-        .bank-img { width: 100%; border-radius: 10px; margin-top: 15px; cursor: pointer; }
-        .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 20px; }
-        .gallery img { width: 100%; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .footer { text-align: center; padding: 20px; font-size: 0.9em; color: #666; }
-        .btn-whatsapp { display: inline-block; background-color: #25d366; color: white; padding: 10px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; margin-top: 10px; }
+        :root {
+            --primary-color: #2d5a27;
+            --accent-color: #ffce00; /* أصفر مشابه للصورة */
+            --bg-dark: #1a1a1a;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+
+        /* بداية الموقع - هيدر احترافي بلمسة تصميمية */
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('logo.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 8px solid var(--accent-color);
+        }
+
+        header h1 {
+            font-family: 'Tajawal', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin: 0;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            color: #fff;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-top: 10px;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -50px auto 40px;
+            padding: 20px;
+        }
+
+        /* نمط البطاقات الاحترافي */
+        .card {
+            background: #fff;
+            color: #333;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            border-top: 5px solid var(--primary-color);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--bg-dark);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-color);
+            margin: 10px auto;
+        }
+
+        /* قسم "لا تتوقف عند أحلامك" بنفس ستايل الصورة */
+        .inspiration-zone {
+            background: var(--bg-dark);
+            color: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 20px;
+        }
+
+        .inspiration-zone h2 {
+            font-size: 2.2rem;
+            color: #fff;
+            margin: 10px 0;
+        }
+
+        .inspiration-zone p {
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+
+        .bank-img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .bank-img:hover {
+            transform: scale(1.02);
+        }
+
+        .btn-contact {
+            background: var(--accent-color);
+            color: #000;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-contact:hover {
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(255,206,0,0.4);
+        }
+
     </style>
 </head>
 <body>
 
 <header>
-    <h1>منصة أبناء أم طلحة القديمة</h1>
-    <p>خدمات، عقارات، وتواصل اجتماعي</p>
+    <h1>مبادرة أم طلحة القديمة</h1>
+    <p>أفضل 71 فكرة للنهوض بالمنطقة</p>
 </header>
 
 <div class="container">
+    
     <div class="card">
-        <div class="logo-container">
-            <img src="logo.jpg" alt="شعار المبادرة">
-        </div>
-        <img src="profile.png" alt="المشرف" class="profile-img">
-        <h3>إشراف: سفير القوافي</h3>
-        <p>نعمل معاً من أجل إعمار وتطوير منطقتنا</p>
-        <a href="https://wa.me/249129642171" class="btn-whatsapp">تواصل عبر واتساب</a>
+        <h2 class="section-title">لدعم المبادرة</h2>
+        <p>ساهم معنا في بناء المستقبل عبر بنك الخرطوم</p>
+        <img src="bank_card.jpg" alt="البنك" class="bank-img">
+    </div>
+
+    <div class="inspiration-zone card" style="border-top: none;">
+        <h2 style="font-family: 'Tajawal'; font-weight: 900;">لا تتوقف عند أحلامك</h2>
+        <p>تابع حتى تحقق حلمك.. لا يوجد شيء مستحيل</p>
+        <a href="https://wa.me/249129642171" class="btn-contact">تواصل مع المشرف الآن</a>
     </div>
 
     <div class="card">
-        <h2>لدعم المبادرة والمشاريع</h2>
-        <p>يمكنكم المساهمة عبر الحساب البنكي التالي:</p>
-        <img src="bank_card.jpg" alt="بيانات بنك الخرطوم" class="bank-img">
+        <h2 class="section-title">إشراف: سفير القوافي</h2>
+        <img src="profile.png" alt="المشرف" style="width:120px; height:120px; border-radius:50%; margin-bottom:15px; border:4px solid var(--accent-color);">
+        <p>محمد الجيلي مصطفى سعيد</p>
     </div>
 
-    <div class="card">
-        <h2>معرض الصور والخواطر</h2>
-        <div class="gallery">
-            <img src="quote1.jpg" alt="حكمة 1">
-            <img src="quote2.jpg" alt="حكمة 2">
-        </div>
-    </div>
 </div>
 
-<div class="footer">
-    <p>جميع الحقوق محفوظة &copy; 2026 - منصة أم طلحة</p>
-</div>
+<footer style="text-align: center; padding-bottom: 40px; color: #777;">
+    <p>جميع الحقوق محفوظة &copy; 2026</p>
+</footer>
 
 </body>
 </html>
