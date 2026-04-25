@@ -8,167 +8,230 @@
     <style>
         :root {
             --primary-color: #2d5a27;
-            --accent-color: #ffce00; /* أصفر مشابه للصورة */
-            --bg-dark: #1a1a1a;
+            --accent-color: #ffce00;
+            --bg-dark: #121212;
+            --card-bg: #ffffff;
         }
 
         body {
             font-family: 'Cairo', sans-serif;
-            background-color: #f0f2f5;
+            background-color: #f4f7f6;
             margin: 0;
             padding: 0;
-            color: #fff;
+            color: #333;
         }
 
-        /* بداية الموقع - هيدر احترافي بلمسة تصميمية */
+        /* هيدر الموقع */
         header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('logo.jpg');
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('logo.jpg');
             background-size: cover;
             background-position: center;
-            height: 350px;
+            height: 300px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            border-bottom: 8px solid var(--accent-color);
+            border-bottom: 6px solid var(--accent-color);
         }
 
         header h1 {
             font-family: 'Tajawal', sans-serif;
             font-size: 2.5rem;
             font-weight: 900;
+            color: #fff;
             margin: 0;
             text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-            color: #fff;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--accent-color);
-            font-weight: bold;
             margin-top: 10px;
-            letter-spacing: 1px;
+            font-weight: bold;
         }
 
         .container {
             max-width: 900px;
-            margin: -50px auto 40px;
-            padding: 20px;
+            margin: -50px auto 50px;
+            padding: 0 20px;
         }
 
-        /* نمط البطاقات الاحترافي */
+        /* البطاقات الأساسية */
         .card {
-            background: #fff;
-            color: #333;
+            background: var(--card-bg);
             border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            text-align: center;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             border-top: 5px solid var(--primary-color);
         }
 
         .section-title {
+            font-family: 'Tajawal', sans-serif;
             font-size: 1.8rem;
             font-weight: 900;
-            color: var(--bg-dark);
-            margin-bottom: 20px;
-            position: relative;
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 25px;
         }
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
+        /* --- ركن الدكتورة ناهد (تصميم انجاز ميديا) --- */
+        .medical-section {
+            background: #1a3317;
+            color: #fff;
+            border-top-color: var(--accent-color);
+        }
+
+        .medical-category {
+            margin-bottom: 30px;
+        }
+
+        .category-title {
             background: var(--accent-color);
-            margin: 10px auto;
-        }
-
-        /* قسم "لا تتوقف عند أحلامك" بنفس ستايل الصورة */
-        .inspiration-zone {
-            background: var(--bg-dark);
-            color: #fff;
-            padding: 40px;
-            border-radius: 20px;
-            margin-top: 20px;
-        }
-
-        .inspiration-zone h2 {
-            font-size: 2.2rem;
-            color: #fff;
-            margin: 10px 0;
-        }
-
-        .inspiration-zone p {
-            color: #ccc;
+            color: #000;
+            padding: 8px 20px;
+            border-radius: 10px;
+            display: inline-block;
+            font-weight: 900;
+            margin-bottom: 15px;
             font-size: 1.1rem;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            text-align: right;
+        }
+
+        .info-list li {
+            background: rgba(255,255,255,0.08);
+            margin-bottom: 8px;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border-right: 4px solid var(--accent-color);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* قسم الإشراف والدعم */
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-color);
+            display: block;
+            margin: 0 auto 15px;
         }
 
         .bank-img {
             width: 100%;
             max-width: 500px;
             border-radius: 15px;
-            transition: transform 0.3s;
-            cursor: pointer;
+            display: block;
+            margin: 15px auto;
         }
 
-        .bank-img:hover {
-            transform: scale(1.02);
-        }
-
-        .btn-contact {
+        .btn-action {
+            display: inline-block;
             background: var(--accent-color);
             color: #000;
-            padding: 15px 40px;
+            padding: 15px 35px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 900;
-            font-size: 1.1rem;
-            display: inline-block;
             margin-top: 20px;
             transition: 0.3s;
         }
 
-        .btn-contact:hover {
-            background: #fff;
+        .btn-action:hover {
+            transform: scale(1.05);
             box-shadow: 0 5px 15px rgba(255,206,0,0.4);
         }
 
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>مبادرة أم طلحة القديمة</h1>
-    <p>أفضل 71 فكرة للنهوض بالمنطقة</p>
+    <h1>منصة أم طلحة القديمة</h1>
+    <p>بوابتكم للتكافل، الوعي، والإعمار</p>
 </header>
 
 <div class="container">
-    
-    <div class="card">
-        <h2 class="section-title">لدعم المبادرة</h2>
-        <p>ساهم معنا في بناء المستقبل عبر بنك الخرطوم</p>
-        <img src="bank_card.jpg" alt="البنك" class="bank-img">
+
+    <div class="card" style="text-align: center;">
+        <img src="profile.png" alt="سفير القوافي" class="profile-img">
+        <h2 style="margin: 0; color: var(--primary-color);">إشراف: سفير القوافي</h2>
+        <p style="color: #666; font-weight: bold;">محمد الجيلي مصطفى سعيد</p>
+        <p>نعمل لخدمة أهلنا وتطوير منطقتنا عبر المبادرات الهادفة.</p>
+        <a href="https://wa.me/249129642171" class="btn-action">تواصل معنا عبر واتساب</a>
     </div>
 
-    <div class="inspiration-zone card" style="border-top: none;">
-        <h2 style="font-family: 'Tajawal'; font-weight: 900;">لا تتوقف عند أحلامك</h2>
-        <p>تابع حتى تحقق حلمك.. لا يوجد شيء مستحيل</p>
-        <a href="https://wa.me/249129642171" class="btn-contact">تواصل مع المشرف الآن</a>
+    <div class="card medical-section">
+        <h2 class="section-title" style="color: #fff;">ركن الدكتورة ناهد الجيلي الطبي</h2>
+        <p style="text-align: center; color: #ffce00; margin-bottom: 30px;">دليل التوعية المختبراتية والإسعافات الأولية</p>
+
+        <div class="medical-category">
+            <div class="category-title">🔬 عالم المختبرات والتحاليل</div>
+            <ul class="info-list">
+                <li>فحص السكر الصائم يتطلب صياماً من 8 إلى 10 ساعات، ويسمح بشرب الماء فقط.</li>
+                <li>تحليل البول الصباحي هو الأفضل للكشف عن البروتين والتهابات الكلى.</li>
+                <li>يجب عدم ممارسة رياضة عنيفة قبل فحص الهرمونات لأنها تسبب نتائج غير دقيقة.</li>
+                <li>تحليل مخزون الحديد (Ferritin) أدق من فحص الحديد العادي لكشف الأنيميا.</li>
+                <li>فحص وظائف الكبد يتأثر بتناول المسكنات القوية، أخبر المخبري إذا كنت تتناولها.</li>
+                <li>الدهون الثلاثية تتطلب صيام 12 ساعة كاملة لضمان دقة النتيجة.</li>
+                <li>فصيلة الدم O- نادرة جداً وتسمى "المتبرع الكريم" لأنها تعطي كل الفصائل.</li>
+            </ul>
+        </div>
+
+        <div class="medical-category">
+            <div class="category-title">🚑 دليل الإسعافات الأولية السريع</div>
+            <ul class="info-list">
+                <li>عند حدوث حروق: ضع الماء الجاري الفاتر فقط، وتجنب وضع المعجون أو الزبدة.</li>
+                <li>عند الرعاف (نزيف الأنف): أمل الرأس للأمام واضغط على الجزء اللين من الأنف.</li>
+                <li>في حال بلع لسان: ارفع الذقن للأعلى مع إمالة الرأس للخلف لفتح مجرى التنفس.</li>
+                <li>عند التواء الكاحل: استخدم الثلج فوراً لتقليل التورم وارفع القدم للأعلى.</li>
+                <li>عند الغصة (شرقة الطعام): استخدم "مناورة هيمليك" بالضغط القوي أعلى البطن.</li>
+                <li>ضربة الشمس: انقل المصاب لمكان بارد، واستخدم كمادات ماء فاتر وليس مثلجاً.</li>
+                <li>لدغة الحشرات: نظف المكان بالماء والصابون وضع ثلجاً لتقليل انتشار السم.</li>
+            </ul>
+        </div>
+
+        <div class="medical-category">
+            <div class="category-title">💡 كبسولات طبية توعوية</div>
+            <ul class="info-list">
+                <li>المضادات الحيوية تعالج البكتيريا فقط، ولا تنفع في علاج الرشح أو الأنفلونزا الفيروسية.</li>
+                <li>شرب الماء الدافئ صباحاً يساعد في تحسين عملية الهضم وتنشيط الكلى.</li>
+                <li>نقص فيتامين د يسبب آلام العظام، الخمول، واعتلال المزاج.</li>
+                <li>المشي السريع لمدة 20 دقيقة يومياً يقلل خطر الإصابة بالسكري بنسبة 30%.</li>
+                <li>تجنب النوم مباشرة بعد الأكل يقلل من فرص حدوث ارتجاع المريء.</li>
+            </ul>
+        </div>
+        <p style="text-align: center; font-style: italic; color: var(--accent-color); font-size: 0.8rem;">* هذا القسم مرجع توعوي ويجب دائماً استشارة الطبيب المختص *</p>
     </div>
 
     <div class="card">
-        <h2 class="section-title">إشراف: سفير القوافي</h2>
-        <img src="profile.png" alt="المشرف" style="width:120px; height:120px; border-radius:50%; margin-bottom:15px; border:4px solid var(--accent-color);">
-        <p>محمد الجيلي مصطفى سعيد</p>
+        <h2 class="section-title">لدعم مشاريع المبادرة</h2>
+        <p style="text-align: center;">نستقبل مساهماتكم لإعمار المنطقة عبر حسابنا في بنك الخرطوم:</p>
+        <img src="bank_card.jpg" alt="حساب البنك" class="bank-img">
+    </div>
+
+    <div class="card" style="background: var(--bg-dark); color: #fff; border: none; text-align: center;">
+        <h2 style="font-family: 'Tajawal'; font-weight: 900; font-size: 2rem;">لا تتوقف عند أحلامك</h2>
+        <p style="color: #aaa;">كل خطوة صغيرة اليوم هي إعمار كبير للغد.</p>
     </div>
 
 </div>
 
-<footer style="text-align: center; padding-bottom: 40px; color: #777;">
-    <p>جميع الحقوق محفوظة &copy; 2026</p>
+<footer>
+    <p>جميع الحقوق محفوظة &copy; 2026 - منصة أم طلحة القديمة</p>
 </footer>
 
 </body>
